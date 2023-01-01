@@ -6,27 +6,17 @@ Chronologer is a deep learning model for highly accurate prediction of peptide C
 Clone the github repository into the desired directory. 
 
 Chronologer has been verified to work under the following environment:
-
-    - Python 3.10.6
-
-    - PyTorch 1.21.1
-
-    - Numpy 1.23.2
-
-    - Pandas 1.4.3
-
-    - Scipy 1.9.1
-
-    - Pyteomics 4.5.5
+| Package | Version |
+| --- | --- |
+| Python | 3.10.6 |
+| PyTorch | 1.21.1 |
+| Numpy | 1.23.2 |
+| Pandas | 1.4.3 |
+| Scipy | 1.9.1 |
+| Pyteomics | 4.5.5 |
 
 # Usage
-Chronologer can predict C18 retention coefficients for peptides between 6-50 amino acids in length and any of the supported modifications below. Chronologer uses EncyclopeDIA-style formatting for modified peptides where modification mass shifts after included in [] after the modified residue
-
-    E.g.    ALSVLGC[+57.021464]GHTSSTK  = Carbamidomethyl at C7
-
-            ASPGTPLSPGS[+79.966331]LR   = Phospho at S11
-            
-            [42.010565]KGSPTPGFSTR      = N-terminal acetylation
+Chronologer can predict C18 retention coefficients for peptides between 6-50 amino acids in length and any of the supported modifications:
 
 | Modification | Mass | Residues |
 | --- | --- | --- |
@@ -44,6 +34,14 @@ Chronologer can predict C18 retention coefficients for peptides between 6-50 ami
 | Pyroglutamate | -18.010565 | N-term E |
 | Pyroglutamate | -17.026549 | N-term Q |
 | Cyclized S-CAM-Cys | +39.994915 | N-term C |
+
+Chronologer uses EncyclopeDIA-style formatting for modified peptides where modification mass shifts after included in [] after the modified residue. E.g.
+
+| PeptideModSeq | Modification |
+| --- | --- |
+| ALSVLGC[+57.021464]GHTSSTK | Carbamidomethyl at C7 |
+| ASPGTPLSPGS[+79.966331]LR | Phospho at S11 |
+| [42.010565]KGSPTPGFSTR | N-terminal acetylation |
 
 The retention time prediction script (Predict_RT.py) takes as its input a tab-separated value (TSV) file that must include a "PeptideModSeq" column with EncyclopeDIA-style sequences (for pre-trained modifications, 2 decimal points of mass resolution is sufficient), and will return a new TSV with a "Pred_HI" column containing the Chronologer predictions. Any additional columns provided in the input TSV will be preserved in the output, with rows containing Chronologer-incompatible peptides removed.
 
