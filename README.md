@@ -20,6 +20,7 @@ Chronologer can predict C18 retention coefficients for peptides between 6-50 ami
             [42.010565]KGSPTPGFSTR      = N-terminal acetylation
 
 | Modification | Mass | Residues |
+| --- | --- | --- |
 | Carbamidomethyl | +57.021464 | C |
 | Oxidation | +15.99491 | M |
 | Phosphorylation | +79.966331 | S, T, Y |
