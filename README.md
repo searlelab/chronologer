@@ -5,18 +5,27 @@ Chronologer is a deep learning model for highly accurate prediction of peptide C
 # Installation
 Clone the github repository into the desired directory. 
 
-Chronologer has been verified to work under the following environment:<br>
+Chronologer has been verified to work under the following environment:
+
     - Python 3.10.6
+
     - PyTorch 1.21.1
+
     - Numpy 1.23.2
+
     - Pandas 1.4.3
+
     - Scipy 1.9.1
+
     - Pyteomics 4.5.5
 
 # Usage
-Chronologer can predict C18 retention coefficients for peptides between 6-50 amino acids in length and any of the supported modifications below. Chronologer uses EncyclopeDIA-style formatting for modified peptides where modification mass shifts after included in [] after the modified residue<br>
+Chronologer can predict C18 retention coefficients for peptides between 6-50 amino acids in length and any of the supported modifications below. Chronologer uses EncyclopeDIA-style formatting for modified peptides where modification mass shifts after included in [] after the modified residue
+
     E.g.    ALSVLGC[+57.021464]GHTSSTK  = Carbamidomethyl at C7
+
             ASPGTPLSPGS[+79.966331]LR   = Phospho at S11
+            
             [42.010565]KGSPTPGFSTR      = N-terminal acetylation
 
 | Modification | Mass | Residues |
