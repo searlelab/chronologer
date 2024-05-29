@@ -53,4 +53,4 @@ A small test file (demo_peptides.txt) with 100 "crap peptides" is included to te
 where "demo_rt.txt" can be replaced with the output file name of your choice
 
 # Citation
-Add BioRXiv when available
+https://www.biorxiv.org/content/10.1101/2023.05.30.542978v1
