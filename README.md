@@ -1,4 +1,5 @@
 # Chronologer
+![alt text](https://github.com/searlelab/chronologer/blob/main/chronologer_architecture.png?raw=true)
 Chronologer is a deep learning model for highly accurate prediction of peptide C18 retention times (reported in % ACN). Chronologer was trained on a new large harmonized database of >2.6 million retention time observations (2.25M unique peptides) constructed from 11 community datasets and natively supports prediction of 17 different modification types. With only a few observations of a new modification type (>10 peptides), Chronologer can be easily re-trained to predict up to 10 user supplied modifications. 
 
 
