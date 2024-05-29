@@ -47,5 +47,10 @@ The retention time prediction script (Predict_RT.py) takes as its input a tab-se
 
 Chronologer can be re-trained to support additional modifications (mininum 10 peptides). Re-training first requires alignment of user retention times into Hydrophobic Index (HI) space (i.e. the % ACN in 0.1% FA that a peptide will elute). As long as user source data contains some Chronologer-predictable peptides (preferably >100), this can be easily done using the provided Align_RT_to_Hydrophobic_Index.py script (use -h flag for detailed instructions). To train Chronologer for new modifications, the modification masses must first be defined in the user_modifications.txt file, which is a TSV file with 3 columns: index, residue, and mass. Do not alter the index column, which is used for internal purposes. User provided masses must perfectly match the values listed in the PeptideModSeq strings. Modifications can be disabled by commenting out the line (i.e. adding # to the beginning of the line). Detailed instructions for training Chronologer can be found by running "python Train_Chronologer.py -h". 
 
+# Demo
+A small test file (demo_peptides.txt) with 100 "crap peptides" is included to test a working environment. From the command line, retention times can be predicted by running
+### python Predict_RT.py demo_peptides.txt demo_rt.txt
+where "demo_rt.txt" can be replaced with the output file name of your choice
+
 # Citation
 Add BioRXiv when available

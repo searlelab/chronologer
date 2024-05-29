@@ -11,7 +11,7 @@ from chronologer.src.utils import timer
 
 
 def parse_args(args):
-    parser = argparse.ArgumentParser( usage = 'Predict_RT.py [optional arguments] input.tsv source_name output.tsv',
+    parser = argparse.ArgumentParser( usage = 'Predict_RT.py [optional arguments] input.tsv output.tsv',
                                       description = 'Predict RTs using Chronologer. Input file should be tab-'
                                                     'separated values with at least one column PeptideModSeq ('
                                                     'additional columns will be preserved) and a new Pred_HI column '
