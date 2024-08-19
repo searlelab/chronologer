@@ -2,8 +2,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-import chronologer.src.constants as constants
-from chronologer.src.distributions import return_distribution_dict
+import chronologer.chronologer_utils.constants as constants
+from chronologer.chronologer_utils.distributions import return_distribution_dict
 
 
 def generate_outlier_mask( array, dist_family, fdr, ):

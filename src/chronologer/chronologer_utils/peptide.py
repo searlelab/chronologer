@@ -6,9 +6,9 @@ import re, itertools, random
 import numpy as np, pandas as pd
 from pyteomics.parser import cleave, expasy_rules
 
-import chronologer.src.constants as constants
-from chronologer.src.masses import masses
-from chronologer.src.tensorize import residues, modseq_to_codedseq
+import chronologer.chronologer_utils.constants as constants
+from chronologer.chronologer_utils.masses import masses
+from chronologer.chronologer_utils.tensorize import residues, modseq_to_codedseq
 
 
 

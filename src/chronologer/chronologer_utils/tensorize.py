@@ -5,8 +5,8 @@ import numpy as np
 import torch
 from torch.utils.data import TensorDataset
 
-import chronologer.src.constants as constants
-from chronologer.src.custom import return_custom_modifications
+import chronologer.chronologer_utils.constants as constants
+from chronologer.chronologer_utils.custom import return_custom_modifications
 
 residues = [ # Primary 20 amino acids            
              'A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
@@ -43,8 +43,8 @@ mod_regex_keys = { r'M\[\+15\.99.{,6}\]':'m', r'C\[\+57\.02.{,6}\]':'c',
 
 # Apply custom modifications
 for code, residue, mod_mass in return_custom_modifications():
-    sign = '\+' if mod_mass >= 0 else '-'
-    mod_str = residue + '\[' + sign + str(abs(mod_mass)).replace('.','\.') + '\]'
+    sign = r'\+' if mod_mass >= 0 else '-'
+    mod_str = residue + r'\[' + sign + str(abs(mod_mass)).replace('.',r'\.') + r'\]'
     mod_regex_keys[ mod_str ] = code
     
 
