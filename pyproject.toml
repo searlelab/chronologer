@@ -31,3 +31,6 @@ chronologer_predict = "chronologer.predict:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"chronologer.chronologer_utils.data" = ["*.txt"]
