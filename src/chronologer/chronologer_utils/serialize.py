@@ -1,7 +1,7 @@
 import os
 import torch
 
-from chronologer.src.chronologer.model import initialize_chronologer_model
+from chronologer.chronologer_utils.chronologer.model import initialize_chronologer_model
 
 def serialize_chronologer_model( model_file=None, ):
     # Will operate on latest timestamped model by default

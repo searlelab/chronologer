@@ -2,12 +2,12 @@ import sys, time, argparse, time, concurrent
 import numpy as np, pandas as pd
 import torch
 
-import chronologer.src.constants as constants
-from chronologer.src.local_io import read_rt_database
-from chronologer.src.tensorize import codedseq_to_array
-from chronologer.src.chronologer.model import initialize_chronologer_model
-from chronologer.src.kde_alignment import KDE_align
-from chronologer.src.utils import timer
+import chronologer.chronologer_utils.constants as constants
+from chronologer.chronologer_utils.local_io import read_rt_database
+from chronologer.chronologer_utils.tensorize import codedseq_to_array
+from chronologer.model import initialize_chronologer_model
+from chronologer.chronologer_utils.kde_alignment import KDE_align
+from chronologer.chronologer_utils.utils import timer
 
 
 def parse_args(args):

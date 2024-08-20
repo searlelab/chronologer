@@ -2,7 +2,7 @@
 Molecular masses
 '''
 
-from chronologer.src.custom import return_custom_modifications
+from chronologer.chronologer_utils.custom import return_custom_modifications
 
 masses = { 'proton' : 1.00727646688, 'hydrogen' : 1.007825035, 'carbon' : 12.000000,
            'nitrogen' : 14.003074, 'oxygen' : 15.99491463, 'phosphorus' : 30.973762,
